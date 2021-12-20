@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.PlayerViewFragment"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/blurBg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/default_albumart"
+        android:scaleType="centerCrop"
+        android:alpha="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/app_name"/>
+
+
+    <TextView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        app:drawableStartCompat="@drawable/ic_back_arrow" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/artworkView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/default_albumart"
+        app:civ_border_overlay="true"
+        app:civ_border_color="?attr/colorPrimary"
+        app:civ_border_width="2sp"
+        android:padding="4sp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintVertical_bias="0"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/controlsWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="#996200ee"
+        android:padding="24dp"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawableStartCompat="@drawable/ic_audiotrack"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="Current Playing Song Name goes here"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/teal_200"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleView"
+            app:layout_constraintWidth_percent="1"
+            app:layout_constraintHorizontal_bias="0"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+        <TextView
+            android:id="@+id/progressDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="0:07"
+            android:textSize="12sp"
+            android:textColor="@color/white" />
+        <TextView
+            android:id="@+id/totalDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"
+            app:layout_constraintEnd_toEndOf="@id/seekBar"
+            app:layout_constraintHorizontal_bias="0"
+            android:text="45:00"
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/prevBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableStartCompat="@drawable/ic_skip_previous"
+            app:layout_constraintTop_toBottomOf="@id/progressDuration"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <ImageButton
+            android:id="@+id/playPauseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_circle"
+            app:layout_constraintEnd_toStartOf="@id/nextBtn"
+            app:layout_constraintStart_toEndOf="@id/prevBtn"
+            app:layout_constraintTop_toBottomOf="@id/progressDuration"
+            android:background="#00000000"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableEndCompat="@drawable/ic_skip_next"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressDuration"
+            android:layout_marginTop="12dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
