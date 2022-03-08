@@ -80,7 +80,6 @@ public class PlayerViewFragment extends Fragment {
         sharedViewModel.getPlayer().observe(requireActivity(),livePlayer->{
             if (livePlayer != null){
                 player = livePlayer;
-
                 //player controls
                 playerControls(player);
             }

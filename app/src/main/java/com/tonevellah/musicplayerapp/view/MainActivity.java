@@ -291,7 +291,6 @@ public class MainActivity extends AppCompatActivity {
                 Song song = new Song(id,uri,name,duration,size,albumId,albumartUri);
                 //add song to songs list
                 songs.add(song);
-
             }
             //show songs on rv
             showSongs(songs);
