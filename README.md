@@ -6,7 +6,7 @@ Images of the app.
 <img src="images/ca77.PNG" width="230"/>
 <img src="images/v343.PNG" width="350"/>
 
-Video tutorials are on youtube (Coding Ton)
+Video tutorials are on youtube - TechPoty Link --> (https://www.youtube.com/@TechPoty) 
 
 Music Player App Tutorials(3):
 
